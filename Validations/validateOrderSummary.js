@@ -1,5 +1,5 @@
-function validateCart(cart){
+function validateOrderSummary(orderId){
     return true;
 }
 
-export default validateCart;
+export default validateOrderSummary;

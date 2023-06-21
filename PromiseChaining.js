@@ -9,7 +9,7 @@ import showWalletBalance from './API/showWalletBalance.js';
 // Promise Chaining
 createOrder(CART)
 .then(function (orderId) {
-    console.log(orderId); 
+    console.log('Order ID -',orderId); 
     return orderId;
 })
 .then(function (orderId){

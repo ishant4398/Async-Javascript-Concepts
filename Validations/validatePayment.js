@@ -1,5 +1,5 @@
-function validateCart(cart){
+function validatePayment(paymentInfo){
     return true;
 }
 
-export default validateCart;
+export default validatePayment;
