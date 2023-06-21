@@ -1,9 +1,9 @@
 import {CART} from "./Constants.js";
-import createOrder from './API/createOrder.js';
-import proceedToPayment from './API/proceedToPayment.js';
-import showOrderSummary from './API/showOrderSummary.js';
-import updateWallet from './API/updateWallet.js';
-import showWalletBalance from './API/showWalletBalance.js';
+import createOrder from './Services/createOrder.js';
+import proceedToPayment from './Services/proceedToPayment.js';
+import showOrderSummary from './Services/showOrderSummary.js';
+import updateWallet from './Services/updateWallet.js';
+import showWalletBalance from './Services/showWalletBalance.js';
 
 
 // Promise Chaining
