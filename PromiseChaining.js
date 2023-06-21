@@ -12,12 +12,20 @@ createOrder(CART)
     console.log('Order ID -',orderId); 
     return orderId;
 })
+.catch(function (err){
+    // Catch will catch the exceptions of all the promises above itself
+    console.log(err.message);
+})
 .then(function (orderId){
     return proceedToPayment(orderId);
 })
 .then(function ({orderId, paymentInfo}) {
     console.log(paymentInfo);
     return {orderId, paymentInfo};
+})
+.catch(function (err){
+    // Catch will catch the exceptions of all the promises above itself
+    console.log(err.message);
 })
 .then(function ({orderId, paymentInfo}){
     return showOrderSummary(orderId, paymentInfo);
@@ -26,6 +34,10 @@ createOrder(CART)
     console.log(orderSummary)
     return orderId;
 })
+.catch(function (err){
+    // Catch will catch the exceptions of all the promises above itself
+    console.log(err.message);
+})
 .then(function (orderId){
     return updateWallet(orderId);
 })
@@ -33,13 +45,24 @@ createOrder(CART)
     console.log(updateWalletBalance);
     return updateWalletBalance;
 })
+.catch(function (err){
+    // Catch will catch the exceptions of all the promises above itself
+    console.log(err.message);
+})
 .then(function (updateWalletBalance){
     return showWalletBalance(updateWalletBalance);
 })
 .then(function (walletBalance) {
     console.log(walletBalance);
     return walletBalance;
-});
+})
+.catch(function (err){
+    // Catch will catch the exceptions of all the promises above itself
+    console.log(err.message);
+})
+// .then(function () {
+//     console.log('No matter what happens! I would definitely be called.');
+// });
 
 
 /* Refactoring Code */
