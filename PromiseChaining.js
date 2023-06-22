@@ -64,6 +64,10 @@ createOrder(CART)
 //     console.log('No matter what happens! I would definitely be called.');
 // });
 
+// // runs when the promise is settled, doesn't matter successfully or not
+// .finally(() => stop loading indicator)
+// so the loading indicator is always stopped before we go on
+
 
 /* Refactoring Code */
 
