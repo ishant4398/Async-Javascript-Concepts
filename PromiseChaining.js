@@ -5,6 +5,7 @@ import showOrderSummary from './Services/showOrderSummary.js';
 import updateWallet from './Services/updateWallet.js';
 import showWalletBalance from './Services/showWalletBalance.js';
 
+console.log('start');
 
 // Promise Chaining
 createOrder(CART)
@@ -67,6 +68,9 @@ createOrder(CART)
 // // runs when the promise is settled, doesn't matter successfully or not
 // .finally(() => stop loading indicator)
 // so the loading indicator is always stopped before we go on
+
+
+console.log('End');
 
 
 /* Refactoring Code */
