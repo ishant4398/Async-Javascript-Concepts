@@ -5,7 +5,7 @@ import showOrderSummary from './Services/showOrderSummary.js';
 import updateWallet from './Services/updateWallet.js';
 import showWalletBalance from './Services/showWalletBalance.js';
 
-console.log('start');
+console.log('start - Before Promise Chain');
 
 // Promise Chaining
 createOrder(CART)
@@ -70,7 +70,7 @@ createOrder(CART)
 // so the loading indicator is always stopped before we go on
 
 
-console.log('End');
+console.log('End - After Promise Chain');
 
 
 /* Refactoring Code */
