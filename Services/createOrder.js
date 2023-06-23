@@ -1,6 +1,6 @@
 import validateCart from '../Validations/validateCart.js';
 
-function createOrder(cart){
+async function createOrder(cart){
     return new Promise(function (resolve,reject){
         if(validateCart(cart)){
             const orderId = '12345';
@@ -11,6 +11,20 @@ function createOrder(cart){
             reject(err);
         }
     })
+
+    /* 
+        Normal Error thrown by throw keyword are not handled by nearest catch handlers 
+        As the Errors occurs asynchronously
+        Executer function can only Handles errors which are thrown synchronously or by reject function
+    */
+
+    // return new Promise(function(resolve, reject) {
+    //     setTimeout(() => {
+    //     const err = new Error("Whoops!");
+    //       throw err;
+    //     //   reject(err); // reject be used instead of throw, if we have to handle any asynchrounous Error.
+    //     }, 1000);
+    //   }).catch(alert);
 }
 
 export default createOrder;
