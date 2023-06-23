@@ -1,6 +1,6 @@
 import validateCart from '../Validations/validateCart.js';
 
-async function createOrder(cart){
+function createOrder(cart){
     return new Promise(function (resolve,reject){
         if(validateCart(cart)){
             const orderId = '12345';
