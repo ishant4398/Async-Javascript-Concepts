@@ -4,6 +4,8 @@ import proceedToPayment from './Services/proceedToPayment.js';
 import showOrderSummary from './Services/showOrderSummary.js';
 import updateWallet from './Services/updateWallet.js';
 import showWalletBalance from './Services/showWalletBalance.js';
+import Example1 from './Examples/Example1.js';
+import Example2 from './Examples/Example2.js';
 
 console.log('start - Before Promise Chain');
 
@@ -71,6 +73,11 @@ createOrder(CART)
 
 
 console.log('End - After Promise Chain');
+
+// Event Loop clearing Concepts
+// Comment out above code to see the actual and correct result
+Example1();
+Example2();
 
 
 /* Refactoring Code */

@@ -13,7 +13,7 @@ function createOrder(cart){
     })
 
     /* 
-        Normal Error thrown by throw keyword are not handled by nearest catch handlers 
+        Normal Asynchronous Error thrown by throw keyword are not handled by nearest catch handlers 
         As the Errors occurs asynchronously
         Executer function can only Handles errors which are thrown synchronously or by reject function
     */
