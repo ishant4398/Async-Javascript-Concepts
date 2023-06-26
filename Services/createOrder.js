@@ -3,8 +3,13 @@ import validateCart from '../Validations/validateCart.js';
 function createOrder(cart){
     return new Promise(function (resolve,reject){
         if(validateCart(cart)){
-            const orderId = '12345';
-            resolve(orderId);
+            // const orderId = '12345';
+            // resolve(orderId);
+
+            setTimeout(() => {
+                const orderId = '12345';
+                resolve(orderId);
+            },2000);
         }
         else{
             const err = new Error('cart is not valid!')

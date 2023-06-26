@@ -71,8 +71,12 @@ const PromiseChaining = () => {
     // });
 
     // // runs when the promise is settled, doesn't matter successfully or not
-    // .finally(() => stop loading indicator)
-    // so the loading indicator is always stopped before we go on
+    .finally(() =>
+        // Will Execute regardless of the promise resolved or rejected.
+        // Used for Clean Up procedure.
+        // Accepts a callback function.
+        console.log('Execution Completed - Finally')
+    );
 
 
     console.log('End - After Promise Chain');
