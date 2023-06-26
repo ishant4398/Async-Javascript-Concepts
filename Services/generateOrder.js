@@ -8,24 +8,30 @@ import updateWallet from "./updateWallet.js";
 const generateOrder = async () =>{
 
     try{
+        console.log('Processing....');
+        
         const OrderId = await createOrder(CART);
-        const {paymentInfo} = await proceedToPayment(OrderId);
-        const {orderSummary}  = await showOrderSummary(OrderId, paymentInfo);
-        const updateWalletBalance = await updateWallet(OrderId);
-        const walletBalance = await showWalletBalance(updateWalletBalance);
-
         console.log('Order ID -', OrderId);
+
+        const {paymentInfo} = await proceedToPayment(OrderId);
         console.log(paymentInfo);
+
+        const {orderSummary}  = await showOrderSummary(OrderId, paymentInfo);
         console.log(orderSummary);
+
+        const updateWalletBalance = await updateWallet(OrderId);
         console.log(updateWalletBalance);
+
+        const walletBalance = await showWalletBalance(updateWalletBalance);
         console.log(walletBalance);
     }
-
     catch(err){
         console.log(err.message);
     }
 
     finally{
+        // Will Execute regardless of the promise resolved or rejected.
+        // Used for Clean Up procedure.
         console.log('Execution Completed - Finally')
     }
     
